@@ -13,10 +13,10 @@
       name: deepseek-harness-compaction-ui
       config:
         thresholdMode: tokens
-        thresholdTokens: 125000
+        thresholdTokens: 256000
         thresholdRatio: 0.8
         retainMode: tokens
-        retainTokens: 32000
+        retainTokens: 64000
         retainRatio: 0.16
         contextWindowTokens: 1000000
         maxTokens: 8192

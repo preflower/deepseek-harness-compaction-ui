@@ -158,12 +158,12 @@ export function resolvePolicy(source = {}) {
   const defaults = Object.freeze({
     thresholdMode: mode(source.thresholdMode ?? 'tokens', 'Config.thresholdMode'),
     thresholdTokens: positiveInteger(
-      source.thresholdTokens ?? 125_000,
+      source.thresholdTokens ?? 256_000,
       'Config.thresholdTokens',
     ),
     thresholdRatio: ratio(source.thresholdRatio ?? 0.8, 'Config.thresholdRatio'),
     retainMode: mode(source.retainMode ?? 'tokens', 'Config.retainMode'),
-    retainTokens: nonNegativeInteger(source.retainTokens ?? 32_000, 'Config.retainTokens'),
+    retainTokens: nonNegativeInteger(source.retainTokens ?? 64_000, 'Config.retainTokens'),
     retainRatio: ratio(source.retainRatio ?? 0.16, 'Config.retainRatio'),
     contextWindowTokens: positiveInteger(
       source.contextWindowTokens ?? 1_000_000,

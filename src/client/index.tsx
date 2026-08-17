@@ -213,10 +213,10 @@ function draftOf(value: CompressSettings | undefined) {
   return {
     auto: value?.auto ?? true,
     thresholdMode: value?.thresholdMode ?? 'tokens' as PolicyMode,
-    thresholdTokens: String(value?.thresholdTokens ?? 125_000),
+    thresholdTokens: String(value?.thresholdTokens ?? 256_000),
     thresholdPercent: percentText(value?.thresholdRatio ?? 0.8),
     retainMode: value?.retainMode ?? 'tokens' as PolicyMode,
-    retainTokens: String(value?.retainTokens ?? 32_000),
+    retainTokens: String(value?.retainTokens ?? 64_000),
     retainPercent: percentText(value?.retainRatio ?? 0.16),
   }
 }

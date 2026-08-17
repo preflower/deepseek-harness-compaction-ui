@@ -64,8 +64,8 @@ npx @deepseek-ai/dsh plugin --profile web add .
 | 设置 | 默认值 |
 | --- | ---: |
 | 自动压缩 | 开启 |
-| 触发阈值 | 125,000 Tokens |
-| 保留近期对话 | 32,000 Tokens |
+| 触发阈值 | 256,000 Tokens |
+| 保留近期对话 | 64,000 Tokens |
 | 上下文窗口 | 1,000,000 Tokens |
 
 ## 实现边界
@@ -90,8 +90,8 @@ npx @deepseek-ai/dsh plugin --profile web add .
     thresholdRatio: 0.8
     retainMode: ratio
     retainRatio: 0.16
-    thresholdTokens: 125000
-    retainTokens: 32000
+    thresholdTokens: 256000
+    retainTokens: 64000
     contextWindowTokens: 1000000
     maxTokens: 8192
     compactionRetries: 1

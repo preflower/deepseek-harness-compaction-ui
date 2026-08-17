@@ -2,10 +2,10 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 import { resolvePolicy, resolveRuntimeBasicConfig, targetKey } from '../policy.js'
 
-test('defaults compact DeepSeek models at 125k and retain 32k', () => {
+test('defaults compact DeepSeek models at 256k and retain 64k', () => {
   const policy = resolvePolicy()
-  assert.equal(policy.basicConfig.thresholdRatio, 0.125)
-  assert.equal(policy.basicConfig.retainTokens, 32_000)
+  assert.equal(policy.basicConfig.thresholdRatio, 0.256)
+  assert.equal(policy.basicConfig.retainTokens, 64_000)
   assert.equal(policy.basicConfig.modelPolicies.length, 2)
   assert(policy.targetKeys.has(targetKey('deepseek-official', 'deepseek-v4-flash')))
   assert(policy.targetKeys.has(targetKey('deepseek-official', 'deepseek-v4-pro')))
